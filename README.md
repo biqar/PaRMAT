@@ -48,6 +48,23 @@ creates a graph with a million edges and a hundred thousand vertices. Other acce
 		-Will the graph be directed (default:yes). To make it undirected: -undirected
 		-Usage of available system memory (default: 0.5 which means up to half of available RAM may be requested). E.g., -memUsage 0.9
 
+Here is the tabular form of the parameters:
+
+| Option | Default Value | Flag | Is Required? |
+| ---  | --- | --- | --- |
+| Number of edges | - | -nEdges 1021 | &check; |
+| NUmber of vertices | - | -nVertices 51 | &check; |
+| Output file | out.txt | -output myout.txt | &cross; |
+| RMAT a parameter | 0.45 | -a 0.42 | &cross; |
+| RMAT b parameter | 0.22 | -b 0.42 | &cross; |
+| RMAT c parameter | 0.22 | -c 0.42 | &cross; |
+| Number of worker CPU threads? | queried/1 | -threads 4 | &cross; |
+| Output should be sorted based on source index? | not sorted | -sorted | &cross; |
+| Allow edge to self? | yes | -noEdgeToSelf | &cross; |
+| Allow duplicate edges? | yes | -noDuplicateEdges | &cross; |
+| Will the graph be directed? | yes | -undirected | &cross; |
+| Usage of available system memory? | 0.5 | -memUsage 0.9 | &cross; |
+
 In addition to above arguments, there are a number of parameters internal to the program itself. They are accessible in `internal_config.hpp`. After applying modifications to this file, you obviously need to re-compile the program to see the effects.
 
 
